@@ -9,16 +9,5 @@ public class IntroController {
 	public String getIntro() {
 		return "intro";
 	}
-	 
-	//test
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
