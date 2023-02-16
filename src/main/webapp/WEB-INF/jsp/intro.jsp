@@ -36,7 +36,7 @@
                 created: function () { console.log("created"); },
                 mounted: function () {
                     console.log("mounted");
-                    this.message = "안녕?";
+                    this.message = "안녕? hello~~";
                 },
                 updated: function () { console.log("updated"); },
                 components: {
