@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="app">
-            <h3>1.첫번째 인스턴스 push</h3>
+            <h3>1.첫번째 인스턴스 push last</h3>
             {{ message }}::::<br />
             <div id="innerApp">
                 {{ msg }}
