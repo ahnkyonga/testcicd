@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
     <head>
-        <title>vue sample</title>
+        <title>cicd vue sample</title>
     </head>
     <body>
         <div id="app">
