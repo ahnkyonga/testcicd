@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="app">
-            <h3>첫번째 인스턴스</h3>
+            <h3>1.첫번째 인스턴스</h3>
             {{ message }}::::<br />
             <div id="innerApp">
                 {{ msg }}
@@ -14,7 +14,7 @@
             <my-local-component></my-local-component>
         </div>
         <div id="app2">
-            <h3>두번째 인스턴스</h3>
+            <h3>2.두번째 인스턴스</h3>
             {{ message }}::::<br />
             <div id="innerApp">
                 {{ msg }}
