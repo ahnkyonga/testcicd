@@ -11,14 +11,9 @@ public class IntroController {
 	}
 	 
 	//test
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@RequestMapping("/view-router")
+	public String getViewRouter() {
+		return "view-router";
+	}
+		
 }
