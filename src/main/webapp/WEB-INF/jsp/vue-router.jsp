@@ -30,7 +30,7 @@
         	var router = new VueRouter({routes});
             new Vue({
             	router
-            }).mount("#app");
+            }).$mount("#app");
             
         </script>
     </body>
