@@ -7,27 +7,54 @@
         <title>vue router</title>
     </head>
     <body>
-        <div id="app">
-            <h1>뷰 라우터 예제</h1>
-            <p>
-            	<router-link to="/main">메인 컴포넌트로 이동</router-link>
-            	<router-link to="/login">로그인 컴포넌트로 이동</router-link>            	
-            </p>
-            <router-view></router-view>            
+  
+        <div id="app">     
+        <p>
+        <router-link to="/user">user</router-link>
+        <!-- <router-link to="posts">posts</router-link>
+        <router-link to="profile">profile</router-link> -->
+        </p>
+        	<router-view name="header"></router-view>
+            <router-view></router-view>
+            <router-view name="footer"></router-view>            
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
         <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
         
         <script>
-        	var Main = {template:"<div>Main</div>"};
-        	var Login = {template:"<div>Login</div>"};
-        	
-        	var routes = [
-        		{path:"/main", component: Main},
-        		{path:"/login", component: Login}
-        	];
-        	
-        	var router = new VueRouter({routes});
+        	var Body = {template: '<div>This is Body</div>'};
+        	var Header = {template: '<div>This is Header</div>'};
+        	var Footer = {template: '<div>This is Footer</div>'};
+            var User = {
+                	template: `
+                		<div>
+            				User Component
+            				<router-view></router-view>
+            			</div>
+                	`
+                };
+            var UserProfile = {template: '<p>User Profile Component</p>'};
+            var UserPost = {template: '<p>User Post Component</p>'};            
+            var routes = [
+            	{
+	            	path:"/user",
+	            	component: User,
+	            	children:[
+		            	{path:"posts", component: UserPost},
+		            	{path:"profile", component: UserProfile}
+	            	]
+            	},
+            	{
+            		path:"/", components:{
+            			default: Body,
+            			header: Header,
+            			footer: Footer
+            		
+            		}
+            	}
+            	
+            ];            
+            var router = new VueRouter({routes});            
             new Vue({
             	router
             }).$mount("#app");
