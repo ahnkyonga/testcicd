@@ -25,7 +25,7 @@ public class IntroController {
 		return "vue-http";
 	}
 	
-	@GetMapping("/data")
+	@RequestMapping("/data")
 	public Map<String, String> getHttpDatas() {
 		Map<String, String> map = new HashMap<String, String>(); // use new HashMap<String, Object>(); for single result
 
