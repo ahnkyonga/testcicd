@@ -19,9 +19,10 @@
             	el:"#app",
             	methods: {
             		getData: function(){
-            			this.$http.get('/testcicd-0.0.1-SNAPSHOT/data')
+            			this.$http.get('/testcicd-0.0.1-SNAPSHOT/api/data')
             			.then(function(response){
-            				console.log(JSON.parse(response.data));
+            				console.log(response);
+            				console.log(response.data);
             			});            			
             		}
             	}
